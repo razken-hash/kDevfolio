@@ -1,0 +1,38 @@
+<nav class="bg-gray-800 dark:bg-green-900 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+
+            <!-- Left: Logo -->
+            <div class="flex items-center space-x-2">
+                <div
+                    class="h-10 w-10 rounded-full bg-lime-400 flex items-center justify-center text-xl font-bold text-gray-800">
+                    K
+                </div>
+                <span class="text-white text-xl font-semibold tracking-wider">ENNICHE</span>
+            </div>
+
+            <!-- Center: Links -->
+            <div class="flex items-center space-x-6">
+                <ng-container *ngFor="let link of navLinks">
+                    <a [routerLink]="link.path"
+                        class="relative text-gray-300 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:text-white group">
+                        {{ link.name }}
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </ng-container>
+            </div>
+
+            <!-- Right: Theme toggle button with label -->
+            <div class="flex items-center space-x-2">
+                <button (click)="toggleTheme()"
+                    class="h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-800 dark:text-yellow-300 transition duration-150 ease-in-out">
+                    <fa-icon *ngIf="!isDarkMode" [icon]="faMoon"></fa-icon>
+                    <fa-icon *ngIf="isDarkMode" [icon]="faSun"></fa-icon>
+                </button>
+                <span class="text-gray-200 dark:text-gray-300 text-sm font-medium select-none">Toggle Mode</span>
+            </div>
+
+        </div>
+    </div>
+</nav>
