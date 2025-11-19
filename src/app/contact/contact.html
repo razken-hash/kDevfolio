@@ -1,0 +1,77 @@
+<section id="contact" class="bg-[#072814] text-white mt-20 py-16 min-h-[calc(100vh-80px)]">
+
+    <div class="max-w-7xl mx-auto gap-16 flex justify-center items-center">
+
+        <!-- LEFT SIDE -->
+        <div class="w-1/2">
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Grow Your Brand?
+            </h1>
+
+            <p class="text-gray-300 leading-relaxed mb-10">
+                Have a project in mind? We'd love to hear about it. Fill out the form or
+                use our contact details to get in touch. Let’s create something amazing together.
+            </p>
+
+            <!-- Contact Info -->
+            <div class="space-y-6">
+
+                <div class="flex items-center gap-4">
+                    <fa-icon [icon]="faEnvelope" class="text-lime-400 text-xl"></fa-icon>
+                    <span>pro.contactabderrazak@gmail.com</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <fa-icon [icon]="faPhone" class="text-lime-400 text-xl"></fa-icon>
+                    <span>+33 7 53 18 82 25</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <fa-icon [icon]="faLocationDot" class="text-lime-400 text-xl"></fa-icon>
+                    <span>Montpellier 34090, Occitanie, France</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: FORM -->
+        <div class="bg-[#08351b] border border-[#0d4925] p-10 rounded-2xl shadow-lg">
+            <form class="space-y-6">
+
+                <div class=" w-full flex flex-col justify-between items-center">
+                    <h1 class="text-2xl">Contact us</h1>
+                    <p class="text-lime-400 font-semibold tracking-wide text-sm mb-2">GET IN TOUCH</p>
+                </div>
+
+
+
+
+                <!-- Name + Email -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Your Name" class="bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
+            p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
+
+                    <input type="email" placeholder="Your Email" class="bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
+            p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
+                </div>
+
+                <!-- Subject -->
+                <input type="text" placeholder="Subject" class="w-full bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
+          p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
+
+                <!-- Message -->
+                <textarea rows="10" placeholder="Your Message" class="w-full bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
+          p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400"></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-lime-400 text-gray-900 font-semibold py-4 rounded-full
+          hover:bg-lime-500 transition duration-300">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+</section>

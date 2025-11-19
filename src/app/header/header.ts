@@ -7,7 +7,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
-  styleUrls: ['./header.css'],
+  styles: ``,
   standalone: true,
   imports: [CommonModule, RouterModule, FontAwesomeModule]
 })
@@ -17,7 +17,7 @@ export class Header {
     { name: 'Education', path: '/education' },
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '#contact' },
   ];
 
   isDarkMode = false;
