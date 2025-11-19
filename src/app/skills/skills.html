@@ -1,0 +1,52 @@
+<div class="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-emerald-950 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <p class="text-lime-400 font-semibold text-sm tracking-wider uppercase mb-4">
+                COMPÉTENCES
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                Mes Compétences Techniques
+            </h1>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="mb-12">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button *ngFor="let category of categories" (click)="setActiveCategory(category)" [class]="activeCategory === category 
+            ? 'bg-lime-400 text-emerald-950' 
+            : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'"
+                    class="px-6 py-3 rounded-full font-semibold transition-all duration-300">
+                    {{ skillsData[category].title }}
+                </button>
+            </div>
+        </div>
+
+        <!-- Skills Display -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12 min-h-[400px]">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+                {{ skillsData[activeCategory].title }}
+            </h2>
+
+            <div class="flex flex-wrap gap-4 justify-center">
+                <div *ngFor="let skill of skillsData[activeCategory].skills"
+                    class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 hover:bg-white/10 hover:border-lime-400/50 transition-all duration-300 group flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                        <img [src]="skill.icon" [alt]="skill.name"
+                            class="w-full h-full object-contain group-hover:scale-110 transition-transform" />
+                    </div>
+                    <span class="text-gray-200 text-base font-medium whitespace-nowrap">
+                        {{ skill.name }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional: Skills Summary -->
+        <div class="mt-12 text-center">
+            <p class="text-gray-400 text-lg">
+                {{ totalSkills }}+ compétences techniques maîtrisées
+            </p>
+        </div>
+    </div>
+</div>
