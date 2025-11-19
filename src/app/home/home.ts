@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowRight, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faFile, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import { faGithub, faLinkedinIn, faMedium } from '@fortawesome/free-brands-svg-icons';
 
@@ -20,4 +20,5 @@ export class Home {
   faGithub = faGithub;
   faLinkedinIn = faLinkedinIn;
   faMedium = faMedium;
+  faDownload = faDownload;
 }

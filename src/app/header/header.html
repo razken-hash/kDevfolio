@@ -1,38 +1,86 @@
-<nav class="fixed top-0 w-full h-20 bg-green-900 shadow-md ">
+<!-- ENHANCED NAVIGATION -->
+<nav class="fixed top-0 w-full h-20 bg-emerald-900/95 backdrop-blur-md shadow-lg border-b border-white/10 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-[70px]">
+        <div class="flex items-center justify-between h-20">
 
-            <!-- Left: Logo -->
-            <div class="flex items-center space-x-2">
-                <div
-                    class="h-10 w-10 rounded-full bg-lime-400 flex items-center justify-center text-xl font-bold text-gray-800">
-                    K
+            <!-- Left: Enhanced Logo -->
+            <a routerLink="/" class="flex items-center space-x-3 group cursor-pointer">
+                <div class="relative">
+                    <div
+                        class="h-12 w-12 rounded-xl bg-gradient-to-br from-lime-400 to-lime-500 flex items-center justify-center text-2xl font-bold text-emerald-900 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        K
+                    </div>
+                    <div
+                        class="absolute -inset-1 bg-lime-400/20 rounded-xl blur-md group-hover:bg-lime-400/40 transition-all duration-300">
+                    </div>
                 </div>
-                <span class="text-white text-xl font-semibold tracking-wider">ENNICHE</span>
+                <div class="flex flex-col">
+                    <span class="text-white text-xl font-bold tracking-wide">KENNICHE</span>
+                    <span class="text-lime-400 text-xs font-medium">Software Engineer</span>
+                </div>
+            </a>
+
+            <!-- Center: Navigation Links (Desktop) -->
+            <div class="hidden md:flex items-center space-x-1">
+                <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="text-lime-400"
+                    class="relative text-gray-200 px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-lime-400 group rounded-lg hover:bg-white/5">
+                    {{ link.name }}
+                    <span
+                        class="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-3/4"></span>
+                </a>
             </div>
 
-            <!-- Center: Links -->
-            <div class="flex items-center space-x-6">
-                <ng-container *ngFor="let link of navLinks">
-                    <a [routerLink]="link.path"
-                        class="relative text-gray-300 px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:text-white group">
-                        {{ link.name }}
-                        <span
-                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <!-- Right: Theme Toggle & Social Links -->
+            <div class="hidden md:flex items-center space-x-4">
+                <!-- Social Icons -->
+                <div class="flex items-center space-x-2 border-r border-white/20 pr-4">
+                    <a *ngFor="let social of socialLinks" [routerLink]="social.url" target="_blank"
+                        rel="noopener noreferrer"
+                        class="h-9 w-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-300 hover:text-lime-400 transition-all duration-300 border border-white/10 hover:border-lime-400/50"
+                        [attr.aria-label]="social.label">
+                        <fa-icon [icon]="social.icon" class="text-base"></fa-icon>
                     </a>
-                </ng-container>
-            </div>
+                    <!-- Email Icon -->
+                    <a href="mailto:contact@example.com"
+                        class="h-9 w-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-300 hover:text-lime-400 transition-all duration-300 border border-white/10 hover:border-lime-400/50"
+                        aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                </div>
 
-            <!-- Right: Theme toggle button with label -->
-            <div class="flex items-center space-x-2">
+                <!-- Theme Toggle -->
                 <button (click)="toggleTheme()"
-                    class="h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-800 dark:text-yellow-300 transition duration-150 ease-in-out">
-                    <fa-icon *ngIf="!isDarkMode" [icon]="faMoon"></fa-icon>
-                    <fa-icon *ngIf="isDarkMode" [icon]="faSun"></fa-icon>
+                    class="h-10 w-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 border border-white/20 hover:border-lime-400/50 group"
+                    aria-label="Toggle theme">
+                    <fa-icon *ngIf="isDarkMode" [icon]="faSun"
+                        class="text-yellow-300 group-hover:rotate-180 transition-transform duration-500"></fa-icon>
+                    <fa-icon *ngIf="!isDarkMode" [icon]="faMoon"
+                        class="text-blue-300 group-hover:-rotate-12 transition-transform duration-500"></fa-icon>
                 </button>
-                <span class="text-gray-200 dark:text-gray-300 text-sm font-medium select-none">Toggle Mode</span>
             </div>
 
+            <!-- Mobile Menu Button -->
+            <button (click)="toggleMobileMenu()"
+                class="md:hidden h-10 w-10 rounded-lg bg-white/10 flex items-center justify-center text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path *ngIf="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    <path *ngIf="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div *ngIf="mobileMenuOpen" class="md:hidden pb-4 space-y-2">
+            <a *ngFor="let link of navLinks" [routerLink]="link.path" (click)="toggleMobileMenu()"
+                class="block text-gray-200 px-4 py-2 text-sm font-medium hover:text-lime-400 hover:bg-white/5 rounded-lg transition-all">
+                {{ link.name }}
+            </a>
         </div>
     </div>
 </nav>

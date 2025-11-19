@@ -1,77 +1,180 @@
-<section id="contact" class="bg-[#072814] text-white mt-20 py-16 min-h-[calc(100vh-80px)]">
+<section id="contact"
+    class="bg-gradient-to-br from-emerald-900 via-teal-900 to-emerald-950 text-white py-20 min-h-[calc(100vh-80px)] relative overflow-hidden">
 
-    <div class="max-w-7xl mx-auto gap-16 flex justify-center items-center">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 right-10 w-96 h-96 bg-lime-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-emerald-400/10 rounded-full blur-3xl animate-pulse"
+            style="animation-delay: 1s;"></div>
+    </div>
 
-        <!-- LEFT SIDE -->
-        <div class="w-1/2">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Grow Your Brand?
-            </h1>
-
-            <p class="text-gray-300 leading-relaxed mb-10">
-                Have a project in mind? We'd love to hear about it. Fill out the form or
-                use our contact details to get in touch. Let’s create something amazing together.
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="text-lime-400 font-semibold text-sm tracking-wider uppercase mb-4">
+                CONTACTEZ-MOI
             </p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+                Prêt à Collaborer ?
+            </h1>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                Vous avez un projet en tête ? J'aimerais en discuter avec vous.
+            </p>
+        </div>
 
-            <!-- Contact Info -->
-            <div class="space-y-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-                <div class="flex items-center gap-4">
-                    <fa-icon [icon]="faEnvelope" class="text-lime-400 text-xl"></fa-icon>
-                    <span>pro.contactabderrazak@gmail.com</span>
+            <!-- LEFT SIDE -->
+            <div class="space-y-8">
+
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-lime-400/30 transition-all duration-300">
+                    <h2 class="text-3xl font-bold mb-4 text-white">
+                        Discutons de Votre Projet
+                    </h2>
+
+                    <p class="text-gray-300 leading-relaxed mb-8">
+                        Que ce soit pour un nouveau projet, une collaboration ou simplement pour échanger,
+                        n'hésitez pas à me contacter. Je serais ravi de créer quelque chose d'exceptionnel ensemble.
+                    </p>
+
+                    <!-- Contact Info Cards -->
+                    <div class="space-y-4">
+
+                        <!-- Email -->
+                        <div
+                            class="group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-lime-400/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-gradient-to-br from-lime-400 to-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                    <fa-icon [icon]="faEnvelope" class="text-emerald-950 text-xl"></fa-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1">Email</p>
+                                    <a href="mailto:pro.contactabderrazak@gmail.com"
+                                        class="text-white hover:text-lime-400 transition-colors">
+                                        pro.contactabderrazak@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div
+                            class="group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-lime-400/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-gradient-to-br from-lime-400 to-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                    <fa-icon [icon]="faPhone" class="text-emerald-950 text-xl"></fa-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1">Téléphone</p>
+                                    <a href="tel:+33753188225" class="text-white hover:text-lime-400 transition-colors">
+                                        +33 7 53 18 82 25
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div
+                            class="group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-lime-400/50 transition-all duration-300">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-gradient-to-br from-lime-400 to-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                    <fa-icon [icon]="faLocationDot" class="text-emerald-950 text-xl"></fa-icon>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1">Localisation</p>
+                                    <p class="text-white">Montpellier 34090, Occitanie, France</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="flex items-center gap-4">
-                    <fa-icon [icon]="faPhone" class="text-lime-400 text-xl"></fa-icon>
-                    <span>+33 7 53 18 82 25</span>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <fa-icon [icon]="faLocationDot" class="text-lime-400 text-xl"></fa-icon>
-                    <span>Montpellier 34090, Occitanie, France</span>
-                </div>
-
+                <!-- Availability Badge -->
+                <!-- <div class="bg-gradient-to-r from-lime-400 to-emerald-400 rounded-2xl p-6 text-emerald-950">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 bg-emerald-950 rounded-full animate-pulse"></div>
+                        <p class="font-bold text-lg">Disponible pour de nouveaux projets</p>
+                    </div>
+                    <p class="mt-2 text-emerald-900">
+                        Temps de réponse moyen : 24 heures
+                    </p>
+                </div> -->
             </div>
-        </div>
 
-        <!-- RIGHT SIDE: FORM -->
-        <div class="bg-[#08351b] border border-[#0d4925] p-10 rounded-2xl shadow-lg">
-            <form class="space-y-6">
+            <!-- RIGHT SIDE: FORM -->
+            <div
+                class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-2xl hover:border-lime-400/30 transition-all duration-300">
 
-                <div class=" w-full flex flex-col justify-between items-center">
-                    <h1 class="text-2xl">Contact us</h1>
-                    <p class="text-lime-400 font-semibold tracking-wide text-sm mb-2">GET IN TOUCH</p>
+                <!-- Form Header -->
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-2 text-white">Envoyez un Message</h2>
+                    <p class="text-lime-400 font-semibold tracking-wide text-sm">RESTONS EN CONTACT</p>
                 </div>
 
+                <form class="space-y-6" (ngSubmit)="onSubmit()">
 
+                    <!-- Name + Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <input type="text" placeholder="Votre Nom" [(ngModel)]="formData.name" name="name"
+                                class="w-full bg-white/5 border border-white/20 text-white placeholder-gray-400 pl-12 pr-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent transition-all"
+                                required />
+                        </div>
 
+                        <div class="relative">
+                            <fa-icon [icon]="faEnvelope"
+                                class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></fa-icon>
+                            <input type="email" placeholder="Votre Email" [(ngModel)]="formData.email" name="email"
+                                class="w-full bg-white/5 border border-white/20 text-white placeholder-gray-400 pl-12 pr-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent transition-all"
+                                required />
+                        </div>
+                    </div>
 
-                <!-- Name + Email -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Your Name" class="bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
-            p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
+                    <!-- Subject -->
+                    <div class="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <input type="text" placeholder="Sujet" [(ngModel)]="formData.subject" name="subject"
+                            class="w-full bg-white/5 border border-white/20 text-white placeholder-gray-400 pl-12 pr-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent transition-all"
+                            required />
+                    </div>
 
-                    <input type="email" placeholder="Your Email" class="bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
-            p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
-                </div>
+                    <!-- Message -->
+                    <textarea rows="6" placeholder="Votre Message" [(ngModel)]="formData.message" name="message"
+                        class="w-full bg-white/5 border border-white/20 text-white placeholder-gray-400 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent transition-all resize-none"
+                        required></textarea>
 
-                <!-- Subject -->
-                <input type="text" placeholder="Subject" class="w-full bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
-          p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400" />
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="group w-full bg-gradient-to-r from-lime-400 to-emerald-400 text-emerald-950 font-bold py-4 rounded-xl hover:from-lime-500 hover:to-emerald-500 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 shadow-lg hover:shadow-lime-400/50">
+                        <span>Envoyer le Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="group-hover:translate-x-1 transition-transform">
+                            <path d="m22 2-7 20-4-9-9-4Z"></path>
+                            <path d="M22 2 11 13"></path>
+                        </svg>
+                    </button>
 
-                <!-- Message -->
-                <textarea rows="10" placeholder="Your Message" class="w-full bg-[#0a3d20] border border-[#14532d] text-white placeholder-gray-400
-          p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400"></textarea>
+                </form>
+            </div>
 
-                <!-- Submit Button -->
-                <button type="submit" class="w-full bg-lime-400 text-gray-900 font-semibold py-4 rounded-full
-          hover:bg-lime-500 transition duration-300">
-                    Send Message
-                </button>
-
-            </form>
         </div>
-
     </div>
 </section>

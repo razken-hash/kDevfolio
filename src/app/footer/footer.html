@@ -1,25 +1,87 @@
-<footer class="w-full border-t border-gray-700/40 py-8 bg-[#062b23] text-gray-300">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- ENHANCED FOOTER -->
+<footer class="w-full border-t border-white/10 bg-emerald-950/80 backdrop-blur-md">
+    <!-- Main Footer Content -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 
-        <!-- Left: Copyright -->
-        <p class="text-sm opacity-80">
-            &copy; 2025 <span class="font-semibold tracking-wide">kDevFolio</span>
-        </p>
+            <!-- Left: Brand & Description -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-gradient-to-br from-lime-400 to-lime-500 flex items-center justify-center text-xl font-bold text-emerald-900">
+                        K
+                    </div>
+                    <span class="text-white text-xl font-bold">DevFolio</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Crafting elegant solutions through code. Full-stack developer passionate about building innovative
+                    web and mobile applications.
+                </p>
+                <div class="flex items-center space-x-3">
+                    <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer"
+                        class="h-9 w-9 rounded-lg bg-white/5 hover:bg-lime-400 flex items-center justify-center text-gray-400 hover:text-emerald-900 transition-all duration-300"
+                        [attr.aria-label]="social.label">
+                        <fa-icon [icon]="social.icon" class="text-base"></fa-icon>
+                    </a>
 
-        <!-- Center: Made with Love -->
-        <div class="text-center text-sm leading-tight">
-            <p class="font-medium">Made with
-                <span class="text-red-500 animate-pulse">❤️</span>
-                by <span class="text-lime-400 font-semibold text-base">KENNICHE ABDERRAZAK</span>
-            </p>
-            <!-- <p class="opacity-70">Crafting digital experiences with passion.</p> -->
+                    <!-- Email icon -->
+                    <a href="mailto:contact@example.com"
+                        class="h-9 w-9 rounded-lg bg-white/5 hover:bg-lime-400 flex items-center justify-center text-gray-400 hover:text-emerald-900 transition-all duration-300"
+                        aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Center: Quick Links -->
+            <div class="space-y-4">
+                <h3 class="text-white font-semibold text-lg mb-4">Navigation</h3>
+                <div class="grid grid-cols-2 gap-2">
+                    <a *ngFor="let link of navLinks" [routerLink]="link.path"
+                        class="text-gray-400 hover:text-lime-400 text-sm transition-colors duration-300 flex items-center gap-1 group">
+                        <span
+                            class="w-1 h-1 bg-lime-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        {{ link.name }}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Tech Stack -->
+            <div class="space-y-4">
+                <h3 class="text-white font-semibold text-lg mb-4">Built With</h3>
+                <div class="flex flex-wrap gap-3">
+                    <div *ngFor="let tech of techStack"
+                        class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 hover:border-lime-400/50 transition-all duration-300 group">
+                        <img [src]="tech.icon" [alt]="tech.name"
+                            class="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        <span class="text-gray-300 text-xs font-medium">{{ tech.name }}</span>
+                    </div>
+                </div>
+
+                <p class="text-gray-400 text-sm mt-4">
+                    Made with <span class="text-red-400">♥</span> by
+                    <span class="text-lime-400 font-semibold">KENNICHE ABDERRAZAK</span>
+                </p>
+            </div>
         </div>
 
-        <!-- Right: Rights Reserved -->
-        <p class="text-sm opacity-80 flex items-center gap-1">
-            <span class="text-lg font-bold">®</span>
-            All rights reserved
-        </p>
+        <!-- Divider -->
+        <div class="border-t border-white/10 my-8"></div>
 
+        <!-- Bottom Bar -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            <p>
+                &copy; 2025 <span class="font-semibold text-white">kDevFolio</span>. All rights reserved.
+            </p>
+            <div class="flex items-center gap-6">
+                <a routerLink="/privacy" class="hover:text-lime-400 transition-colors">Privacy Policy</a>
+                <a routerLink="/terms" class="hover:text-lime-400 transition-colors">Terms of Service</a>
+                <a routerLink="/sitemap" class="hover:text-lime-400 transition-colors">Sitemap</a>
+            </div>
+        </div>
     </div>
 </footer>
