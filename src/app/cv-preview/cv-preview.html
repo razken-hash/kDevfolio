@@ -6,9 +6,10 @@
 </button>
 
 <!-- CV Preview Modal -->
-<div *ngIf="showModal" class="fixed inset-0 z-50 flex items-start justify-center bg-black/20" (click)="closeModal()">
+<div *ngIf="showModal" class="z-50 fixed inset-0 flex items-center justify-center p-4 bg-black/20"
+    (click)="closeModal()">
     <div (click)="$event.stopPropagation()"
-        class="bg-gradient-to-br from-emerald-900 to-emerald-950 border border-white/20 rounded-2xl w-full max-w-7xl mx-4 flex flex-col mt-24"
+        class="bg-gradient-to-br from-emerald-900 to-emerald-950 border border-white/20 rounded-2xl w-full max-w-7xl mx-4 flex flex-col mt-20"
         style="max-height: calc(100vh - 120px);">
 
         <!-- Modal Header -->

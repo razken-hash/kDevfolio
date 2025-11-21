@@ -54,50 +54,145 @@ export class Projects {
   projects: Project[] = [
     {
       id: 1,
-      name: 'E-Commerce Platform',
+      name: 'SmellBERT',
       category: 'fullstack',
-      shortDescription: 'Plateforme e-commerce complète avec panier et paiement',
-      longDescription: 'Application e-commerce full-stack avec gestion des produits, panier d\'achats, système de paiement intégré et tableau de bord administrateur. Architecture microservices avec API REST et authentification JWT.',
-      images: ["assets/images/projects/project.png"],
+      shortDescription: 'Plateforme web intégrant CodeBERT pour la détection automatique des code smells.',
+      longDescription: `Plateforme web développée avec Angular, Spring Boot et Python permettant l’entraînement et 
+    l’intégration d’un modèle CodeBERT préentraîné. L’application analyse des projets Java complets, 
+    détecte automatiquement les code smells et génère des rapports PDF détaillés via des endpoints REST.`,
+      images: ['assets/images/projects/project.png'],
       technologies: [
         { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg' },
         { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
-        { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-        { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' }
-      ],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
+        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      ]
     },
+
     {
       id: 2,
-      name: 'Task Management API',
-      category: 'backend',
-      shortDescription: 'API REST pour gestion de tâches avec authentification',
-      longDescription: 'API RESTful robuste pour la gestion de tâches et projets. Inclut authentification JWT, gestion des rôles, filtrage avancé et pagination. Documentation Swagger complète.',
-      images: ["assets/images/projects/project.png"],
-      technologies: [
-        { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
-        { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-        { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' }
-      ],
-      githubUrl: 'https://github.com'
-    },
-    {
-      id: 3,
-      name: 'Portfolio Dashboard',
-      category: 'frontend',
-      shortDescription: 'Dashboard moderne avec graphiques interactifs',
-      longDescription: 'Interface utilisateur moderne et responsive pour tableau de bord d\'analyse. Graphiques interactifs, animations fluides et design épuré.',
-      images: ["assets/images/projects/project.png"],
+      name: 'Static & Dynamic Analyzer for Angular/React',
+      category: 'fullstack',
+      shortDescription: 'Analyseur statique et dynamique des projets Angular et React.',
+      longDescription: `Application MEAN permettant l’analyse des projets Angular/React. Génération automatique 
+    des graphes de navigation, extraction de la structure du projet, et scénarios de test avec Selenium et Puppeteer.`,
+      images: ['assets/images/projects/project.png'],
       technologies: [
         { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg' },
-        { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-        { name: 'TailwindCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' }
-      ],
-      liveUrl: 'https://example.com'
+        { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Selenium', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg' },
+        { name: 'Puppeteer', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/puppeteer/puppeteer-original.svg' }
+      ]
     },
+
     {
       id: 3,
+      name: 'MPay',
+      category: 'fullstack',
+      shortDescription: 'Solution web et mobile pour la gestion centralisée des comptes bancaires.',
+      longDescription: `Solution sécurisée avec Spring Boot, Angular et Flutter pour la centralisation de comptes bancaires 
+    et la réalisation de transactions via l’API SATIM. Sécurité avancée : JWT, OTP, empreinte, chiffrement, rate limiting.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+        { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg' },
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' }
+      ]
+    },
+
+    {
+      id: 4,
+      name: 'Yalidine Queue',
+      category: 'mobile',
+      shortDescription: 'Application Flutter pour la gestion des files d’attente Yalidine.',
+      longDescription: `Développée en Flutter, l’application gère les files d’attente, s’intègre à une API REST et assure 
+    l’impression sur imprimantes thermiques. Déployée sur tablettes Android et Android TV.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'RESTful API', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg' },
+      ]
+    },
+
+    {
+      id: 5,
+      name: 'TeaBoy',
+      category: 'mobile',
+      shortDescription: 'Application Flutter de commande de thé/café en entreprise.',
+      longDescription: `Développée en Flutter avec authentification, paiement en ligne, messagerie via WebSockets 
+    et notifications push Firebase.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' },
+        { name: 'WebSockets', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg' }
+      ]
+    },
+
+    {
+      id: 6,
+      name: 'Parkir',
+      category: 'fullstack',
+      shortDescription: 'App mobile Kotlin + backend Spring Boot pour réservation de parkings.',
+      longDescription: `Application permettant la réservation de parkings, l’intégration Google Maps, paiement en ligne,
+    notifications push et validation via QR Code hors ligne.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Jetpack Compose', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg' },
+        { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+        { name: 'Google Maps API', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg' },
+        { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' },
+      ]
+    },
+
+    {
+      id: 7,
+      name: 'AutoDrive',
+      category: 'mobile',
+      shortDescription: 'Application Flutter Desktop pour la gestion des auto-écoles.',
+      longDescription: `Développée avec Flutter Desktop. Intégration Firebase pour la gestion de données, 
+    notifications push et génération de rapports PDF.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' }
+      ]
+    },
+
+    {
+      id: 8,
+      name: 'Hotelency',
+      category: 'backend',
+      shortDescription: 'Projet microservices pour hôtels, agences et clients.',
+      longDescription: `Projet académique en Spring Boot basé sur micro-services avec implémentations en RMI, SOAP, REST,
+    gRPC et GraphQL. Gestion des données via Spring Data JPA.`,
+      images: ['assets/images/projects/project.png'],
+
+      technologies: [
+        { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+        { name: 'RESTful API', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg' },
+        { name: 'gRPC', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg' },
+        { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' }
+      ]
+    },
+
+    {
+      id: 9,
+      name: 'TeraApp',
+      category: 'fullstack',
+      shortDescription: 'Clone Google Docs avec édition collaborative temps réel.',
+      longDescription: `Développée en MEAN stack. Authentification SSO, REST + WebSocket, synchronisation temps réel 
+    et implémentation CRDT pour résolution de conflits.`,
+      images: ['assets/images/projects/project.png'],
+      technologies: [
+        { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg' },
+        { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'WebSocket', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg' }
+      ]
+    },
+    {
+      id: 10,
       name: 'KDevfolio',
       category: 'frontend',
       shortDescription: 'Dashboard moderne avec graphiques interactifs',
@@ -111,21 +206,8 @@ export class Projects {
       liveUrl: 'https://k-devfolio-vercel.vercel.app/',
       githubUrl: 'https://github.com/razken-hash/k-devfolio.git'
     },
-    {
-      id: 4,
-      name: 'Fitness Tracker App',
-      category: 'mobile',
-      shortDescription: 'Application mobile pour suivi fitness et nutrition',
-      longDescription: 'Application mobile cross-platform pour le suivi des activités physiques, nutrition et objectifs de santé. Synchronisation cloud et statistiques détaillées.',
-      images: ["assets/images/projects/project.png", "assets/images/projects/project.png"],
-      technologies: [
-        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
-        { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
-        { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' }
-      ],
-      githubUrl: 'https://github.com'
-    }
   ];
+
 
   get filteredProjects(): Project[] {
     return this.activeTab === 'all'
