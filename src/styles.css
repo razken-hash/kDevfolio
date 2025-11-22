@@ -6,6 +6,8 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    user-drag: none;
+    -webkit-user-drag: none;
 }
 
 
