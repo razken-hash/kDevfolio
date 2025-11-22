@@ -147,12 +147,12 @@ export class Projects {
 
     {
       id: 7,
-      name: 'AutoDrive',
-      category: 'mobile',
+      name: 'AutoSchool',
+      category: 'frontend',
       shortDescription: 'Application Flutter Desktop pour la gestion des auto-écoles.',
       longDescription: `Développée avec Flutter Desktop. Intégration Firebase pour la gestion de données, 
     notifications push et génération de rapports PDF.`,
-      images: ['assets/images/projects/project.png'],
+      images: ['assets/images/projects/autoschool/1.png', 'assets/images/projects/autoschool/2.png', 'assets/images/projects/autoschool/3.png'],
       technologies: [
         { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
         { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' }
