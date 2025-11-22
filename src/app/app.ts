@@ -6,7 +6,6 @@ import { Education } from './education/education';
 import { Skills } from './skills/skills';
 import { Projects } from './projects/projects';
 import { Header } from './header/header';
-
 @Component({
   selector: 'app-root',
   imports: [

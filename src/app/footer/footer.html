@@ -52,7 +52,7 @@
                     Navigation
                 </h3>
                 <div class="grid grid-cols-2 gap-3">
-                    <a *ngFor="let link of navLinks" [routerLink]="link.path"
+                    <a *ngFor="let link of navLinks" (click)="scrollTo(link.path)"
                         class="text-gray-300 hover:text-lime-400 text-sm transition-all duration-300 flex items-center gap-2 group hover:translate-x-1">
                         <span
                             class="w-1.5 h-1.5 bg-lime-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>

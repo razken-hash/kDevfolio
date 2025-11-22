@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { NavLink } from '../header/header';
 
 
-
 interface SocialLink {
   icon: any;
   url: string;
@@ -34,11 +33,11 @@ export class Footer {
   faLinkedin = faLinkedin;
 
   navLinks: NavLink[] = [
-    { name: 'Accueil', path: '/' },
-    { name: 'À Propos', path: '/about' },
-    { name: 'Compétences', path: '/skills' },
-    { name: 'Projets', path: '/projects' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Accueil', path: 'home' },
+    { name: 'Education', path: 'education' },
+    { name: 'Projets', path: 'projects' },
+    { name: 'Compétences', path: 'skills' },
+    { name: 'Contact', path: 'contact' }
   ];
 
   socialLinks: SocialLink[] = [
@@ -51,4 +50,16 @@ export class Footer {
     { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
     { name: 'TailwindCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' }
   ];
+
+  scrollTo(id: string) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    });
+  }
 }

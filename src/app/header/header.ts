@@ -55,11 +55,11 @@ export class Header {
   faLinkedin = faLinkedin;
 
   navLinks: NavLink[] = [
-    { name: 'Accueil', path: '/' },
-    { name: 'À Propos', path: '/about' },
-    { name: 'Compétences', path: '/skills' },
-    { name: 'Projets', path: '/projects' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Accueil', path: 'home' },
+    { name: 'Education', path: 'education' },
+    { name: 'Projets', path: 'projects' },
+    { name: 'Compétences', path: 'skills' },
+    { name: 'Contact', path: 'contact' }
   ];
 
   socialLinks: SocialLink[] = [
@@ -105,4 +105,17 @@ export class Header {
       }
     }
   }
+
+  scrollTo(id: string) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    });
+  }
+
 }
