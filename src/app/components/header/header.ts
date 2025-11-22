@@ -55,7 +55,7 @@ export class Header {
   faLinkedin = faLinkedin;
 
   navLinks: NavLink[] = [
-    { name: 'Accueil', path: 'home' },
+    { name: 'Accueil', path: 'welcome' },
     { name: 'Education', path: 'education' },
     { name: 'Projets', path: 'projects' },
     { name: 'Compétences', path: 'skills' },

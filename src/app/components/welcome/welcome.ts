@@ -10,12 +10,12 @@ import { CvPreview } from '../cv-preview/cv-preview';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-welcome',
   imports: [CommonModule, RouterModule, FontAwesomeModule, CvPreview],
-  templateUrl: './home.html',
+  templateUrl: './welcome.html',
   styles: ``,
 })
-export class Home {
+export class Welcome {
   faArrowRight = faArrowRight;
   faFile = faFile;
   faGithub = faGithub;
